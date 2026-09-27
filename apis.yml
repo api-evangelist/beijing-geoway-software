@@ -1,23 +1,56 @@
 aid: beijing-geoway-software
+
 name: Beijing GEOWAY Software
-description: 'Beijing GEOWAY Software is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Beijing GEOWAY Software (北京吉威空间信息股份有限公司) is a leading Chinese earth‑space information technology provider founded in 1998. It offers proprietary remote sensing image processing, digital photogrammetry, and GIS software, serving satellite remote sensing, mapping, natural resources, digital government, and smart city sectors. With dual headquarters in Beijing and Wuhan and branches across over ten provinces, the company emphasizes autonomous innovation and comprehensive services in software development, data analysis, system construction, and operations.'
+
 url: https://raw.githubusercontent.com/api-evangelist/beijing-geoway-software/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
 - Company
-apis: []
+- Space
+- Remote Sensing
+- GIS
+- Software
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/beijing-geoway-software-hosts.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: http://www.geoway.com.cn/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The company website returns a JavaScript shell with no machine‑readable API documentation.
+  evidence:
+    - url: http://www.geoway.com.cn/
+      status: 200
+  checked: '2026-09-27'
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
